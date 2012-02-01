@@ -1,0 +1,84 @@
+section#css
+	h1 CSS
+	.row
+		.col-6
+			p Generally speaking, we adopt a lowercase syntax for hex values, class and ID names. Names are currently hyphenated, conforming with our naming convention for files and directory structure.
+			p Shorthand can be used for style attributes that have integer or hex-based values, but background and font values should be separated out into individual parameters to increase readability.
+			p We try to keep stylesheets as easy to read as possible, using line-breaks between rules. We aggregate our styles before they get output by the browser, removing the extra whitespace to save on file size.
+
+		.col-6
+			pre: code.prettyprint
+				| #my-id
+				|   padding: 10px 15px 15px 10px;
+				|   margin 10px 0;
+				|   color: #fff;
+				|   background-image: url("image.png");
+				|   background-position: 0 0;
+				|   background-repeat: no-repeat;
+				| }
+				| 
+				| .my-class {
+				|   position: absolute;
+				|   z-index: 0;
+				|   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+				|      -moz-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+				|       -ms-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+				|        -o-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+				|           box-shadow: 0 1px 3px rgba(0,0,0,.5);
+				| }
+
+	h2 CSS3
+	.row
+		.col-8
+			p We embrace progressive enhancement - CSS3 is a big part of that.
+			p Using browser vendor prefixes, we add rounded corners, shadows, multiple background images, background sizes, angles, gradients, animations (and so on), to embellish a strong base level experience that older browsers can provide.
+			p CSS3 is a powerful and lightweight to reward more advanced users, but the most basic experience needs to be considered first and foremost.
+		.col-4
+			aside.callout
+				p Look out for CSS3 properties (such as 
+					a(href='http://caniuse.com/border-radius') border radius
+					)  which no longer need vendor prefixes.
+					a(href='http://html5please.us') html5please.us
+					|  is a useful resource for checking current levels of browser support.
+
+	h2 Web Fonts
+	.row
+		.col-4
+			p.font-face Aa
+		.col-8
+			p Wherever possible we use legal web fonts instead of images for titles on our sites. It saves on creating large images sprites and makes content management much easier. They also tend to be smaller in size, increasing page speed.
+			p Our primary replacement technique is font-face, utilising the 
+				a(href='http://www.fontsquirrel.com') Font Squirrel Generator
+				|  and syntax. We do consider others too, but
+				a(href='http://www.fontsquirrel.com') Font Squirrel
+				|  is our preferred choice.
+
+	h2 IE Stylesheets
+	p To keep our CSS as valid as possible, we move our IE-relevant hacks into their wn stylesheet. This is included in the head of the document as follows:
+	pre: code.prettyprint
+		| &lt;!--[if lt IE 9]&gt;
+		|   &lt;link rel="stylesheet" href="/resource/css/internet-explorer.css"&gt;
+		| &lt;![endif]--&gt;
+
+	h2 Code Commenting
+	.row
+		.col-6
+			p Within well organised files, code comments are invaluable to help developers navigate through projects and complete their work.
+			p CSS files should have a title at the top, describing the file's purpose.
+			p Each section of the file should be grouped according to content and relevance, and titles should be used to clearly identify what a group of styles is for. Within these, sub-headers can be used to identify certain related content styles.
+		.col-6
+			pre: code.prettyprint
+				| /**
+				|  * Global.css - Defines all global styles used
+				|  * throughout multiple site sections
+				|  */
+				| 
+				| /** Structural Styles **/
+				| 
+				| /* Styles for the main navigation */
+				| .styles {
+				| }
+				| 
+				| /** General Classes Used Throughout The Site **/
+				| .styles {
+				| }
