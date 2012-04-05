@@ -10,12 +10,14 @@
 	overflow auto
 
 #container
-	max-width 920px
+	// max-width 920px
+	width 920px
 	padding 40px 20px
 	margin 0 auto
 
 #main-header
 	text-align center
+	margin-bottom $baseLineHeight
 	h1
 		a
 			width 306px
@@ -25,28 +27,39 @@
 			overflow hidden
 			margin 0 auto
 			background url("/images/structure/logo-clock.png") 0 0 no-repeat
+	h2
+		margin-bottom 0
 
 #main-navigation
+	height 42px
 	margin-bottom $baseLineHeight
-	border-top 2px solid $baseBorderColor
-	border-bottom 4px solid $baseBorderColor
-	text-align center
-	li
-		display inline-block
-		margin 3px 5px 3px
-		a
-			display block
-			color $baseFontColor
-			font(#000, 24px, 1em)
-			line-height 1em
-			font-family "GothamDemiCondensed",Arial,Helvetica,sans-serif
-			text-decoration none
-			padding 3px 5px
-			border-radius 3px
-			text-rendering: optimizeLegibility;
-			&:hover
-				color #000
-				background-color $secondaryColor
+	width inherit
+	ul
+		width inherit
+		border-top 2px solid $baseBorderColor
+		border-bottom 4px solid $baseBorderColor
+		z-index 10
+		background-color #b7e2e9
+		li
+			display inline-block
+			margin 3px 5px 3px
+			a
+				display block
+				color $baseFontColor
+				font(#000, 24px, 1em)
+				line-height 1em
+				font-family "GothamDemiCondensed",Arial,Helvetica,sans-serif
+				text-decoration none
+				padding 3px 5px
+				border-radius 3px
+				text-rendering: optimizeLegibility;
+				&:hover
+					color #000
+					background-color $secondaryColor
+		&.fixed
+			position fixed
+			top 0
+			left auto
 
 #main-content > section
 	float left
@@ -89,4 +102,7 @@
 		height 260px
 		background-color $secondaryColor
 		border-radius 50%
-		z-index -1
+		z-index 0
+	p
+		position relative
+		z-index 1
