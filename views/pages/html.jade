@@ -1,49 +1,58 @@
-section#html
+article#html
 	h1 HTML
-	.row
-		.col-4
-			p We use the HTML5 doctype in all new projects. Within the head of the document, we define the character-set as UTF-8, and we use metatags to define accurate page titles, descriptions and keywords.
-			p After the metatags, we include relevant stylesheets, leaving any JavaScript to be included later on, before the closing body tag. Tracking and modernising JS is sometimes required in the head.
-			p We add favicons and simple mobile-friendly information in the head too.
-			p Any Facebook metadata resides within the head, but they invalidate the document so we only use these where necessary.
+	section#html-overview
+		h2 Overview
+		.row
+			.col-4
+				p We use the HTML5 doctype in all new projects. Within the head of the document, we define the character-set as UTF-8, and we use metatags to define accurate page titles, descriptions and keywords.
+				p After the metatags, we include relevant stylesheets, leaving any JavaScript to be included later on, before the closing body tag. Tracking and modernising JS is sometimes required in the head.
+				p We add favicons and simple mobile-friendly information in the head too.
+				p Any Facebook metadata resides within the head, but they invalidate the document so we only use these where necessary.
+			.col-8
+				pre: code.prettyprint
+					| &lt;!DOCTYPE html&gt;
+					| &lt;html lang=&quot;en&quot;&gt;
+					|   &lt;head&gt;
+					|     &lt;title&gt;&lt;/title&gt;
+					|     &lt;meta charset=&quot;utf-8&quot;&gt;
+					|     &lt;meta name=&quot;author&quot; content=&quot;Clock - www.clock.co.uk&quot;&gt;
+					|     &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+					|     &lt;meta name=&quot;keywords&quot; content=&quot;&quot;&gt;
+					|     &lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico&quot;&gt;
+					|     &lt;link rel=&quot;stylesheet&quot; href=&quot;/resource/css/style.css&quot;&gt;
+					|   &lt;/head&gt;
+					|   &lt;body&gt;
+					|     &lt;div id=&quot;container&quot;&gt;
+					|     &lt;/div&gt;
+					|     &lt;script src=&quot;/resource/js/jquery.js&quot;&gt;&lt;/script&gt;
+					|   &lt;/body&gt;
+					| &lt;/html&gt;
 
-		.col-8
-			pre: code.prettyprint
-				| &lt;!DOCTYPE html&gt;
-				| &lt;html lang=&quot;en&quot;&gt;
-				|   &lt;head&gt;
-				|     &lt;title&gt;&lt;/title&gt;
-				|     &lt;meta charset=&quot;utf-8&quot;&gt;
-				|     &lt;meta name=&quot;author&quot; content=&quot;Clock - www.clock.co.uk&quot;&gt;
-				|     &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-				|     &lt;meta name=&quot;keywords&quot; content=&quot;&quot;&gt;
-				|     &lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico&quot;&gt;
-				|     &lt;link rel=&quot;stylesheet&quot; href=&quot;/resource/css/style.css&quot;&gt;
-				|   &lt;/head&gt;
-				|   &lt;body&gt;
-				|     &lt;div id=&quot;container&quot;&gt;
-				|     &lt;/div&gt;
-				|     &lt;script src=&quot;/resource/js/jquery.js&quot;&gt;&lt;/script&gt;
-				|   &lt;/body&gt;
-				| &lt;/html&gt;
+	section#page-titles
+		h2 Page Titles
+		p Out format for page titles is:
+		dl
+			dt Homepage
+			dd: code.prettyprint &lt;title&gt;Site Name - A short description of the site&lt;/title&gt;
+			dt Sub-Section Page
+			dd: code.prettyprint &lt;title&gt;Section Name / Site Name&lt;/title&gt;
+			dt Article Page
+			dd: code.prettyprint &lt;title&gt;Article Name / Section Name / Site Name&lt;/title&gt;
 
-	h2 Page Titles
-	p Out format for page titles is:
-	dl
-		dt Homepage
-		dd: code.prettyprint &lt;title&gt;Site Name - A short description of the site&lt;/title&gt;
-		dt Sub-Section Page
-		dd: code.prettyprint &lt;title&gt;Section Name / Site Name&lt;/title&gt;
-		dt Article Page
-		dd: code.prettyprint &lt;title&gt;Article Name / Section Name / Site Name&lt;/title&gt;
-	
-	h2 HTML5
-	p We try to use as much HTML5 as we can get away with, without relying on polyfills that force old browsers to work. The following HTML5 syntax will render gracefully in IE.
-	ul
-		li No 'type' attributes
-		li New input types (date, number email, search tel, url) *
-		li Block level links
-		li Input 'placeholder' attribute
-		li Use of button tag
-	p Some projects will require full HTML5 development, where old browsers are forced to render all new elements. This is not our current standard though.
-	p: small * Any browser incapable of rendering these elements will show a text input.
+	section#html5
+		h2 HTML5
+		p We try to use as much HTML5 as we can get away with, without relying on polyfills that force old browsers to work. The following HTML5 syntax will render gracefully in IE.
+		ul
+			li No 'type' attributes
+			li New input types (date, number email, search tel, url) *
+			li Block level links
+			li Input 'placeholder' attribute
+			li Use of button tag
+		p Some projects will require full HTML5 development, where old browsers are forced to render all new elements. This is not our current standard though.
+		p: small * Any browser incapable of rendering these elements will show a text input.
+
+	section#html-validation
+		h2 Validation
+		p We always aim to achieve 100% valid markup. It helps avoid bugs, affects a product's SEO and should be very carefully considered when building a site. The 
+			a(href='http://chrispederick.com/work/web-developer/') Web Developer extension
+			|  for Firefox or Chrome allows you to validate locally running files.
