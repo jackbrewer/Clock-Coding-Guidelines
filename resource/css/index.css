@@ -9,7 +9,7 @@
 	text-shadow: none;
 }
 html {
-	background-image: url("/resource/images/structure/bg.gif");
+	background-image: url("../images/structure/bg.gif");
 	background-position: 0px 0px;
 	background-repeat: repeat;
 	background-color: #fff;
@@ -18,7 +18,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url("/resource/images/structure/blue-bg.png");
+	background-image: url("../images/structure/blue-bg.png");
 	background-position: 50% -50px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -77,7 +77,7 @@ label {
 }
 @font-face {
 	font-family: 'GothamDemiCondensed';
-	src: url("/resource/fonts/franklingothicdemicondensed-webfont.eot") format('eot'), url("/resource/fonts/franklingothicdemicondensed-webfont.woff") format('woff'), url("/resource/fonts/franklingothicdemicondensed-webfont.ttf") format('truetype'), url("/resource/fonts/franklingothicdemicondensed-webfont.svg#DIN-Bold") format('svg');
+	src: url("../fonts/franklingothicdemicondensed-webfont.eot") format('eot'), url("../fonts/franklingothicdemicondensed-webfont.woff") format('woff'), url("../fonts/franklingothicdemicondensed-webfont.ttf") format('truetype'), url("../fonts/franklingothicdemicondensed-webfont.svg#DIN-Bold") format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -373,7 +373,7 @@ hr {
 	border-width: 1px;
 }
 #wrapper {
-	background-image: url("/resource/images/structure/illustration.png");
+	background-image: url("../images/structure/illustration.png");
 	background-position: 100% 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -402,7 +402,7 @@ hr {
 	text-indent: -9999px;
 	overflow: hidden;
 	margin: 0;
-	background: url("/resource/images/structure/logo-clock.png") 0 0 no-repeat;
+	background: url("../images/structure/logo-clock.png") 0 0 no-repeat;
 	background-size: 100% auto;
 }
 #main-header h2 {
@@ -424,7 +424,7 @@ hr {
 	text-indent: -9999px;
 	overflow: hidden;
 	margin: 0 auto;
-	background: url("/resource/images/structure/logo-clock.png") 0 0 no-repeat;
+	background: url("../images/structure/logo-clock.png") 0 0 no-repeat;
 }
 .general #main-header h2 {
 	text-align: center;
@@ -588,8 +588,8 @@ hr {
 }
 @font-face {
 	font-family: 'LavanderiaRegular';
-	src: url("/resource/fonts/lavanderia_regular-webfont.eot");
-	src: url("/resource/fonts/lavanderia_regular-webfont.eot?#iefix") format('embedded-opentype'), url("/resource/fonts/lavanderia_regular-webfont.woff") format('woff'), url("/resource/fonts/lavanderia_regular-webfont.ttf") format('truetype'), url("/resource/fonts/lavanderia_regular-webfont.svg#LavanderiaRegular") format('svg');
+	src: url("../fonts/lavanderia_regular-webfont.eot");
+	src: url("../fonts/lavanderia_regular-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/lavanderia_regular-webfont.woff") format('woff'), url("../fonts/lavanderia_regular-webfont.ttf") format('truetype'), url("../fonts/lavanderia_regular-webfont.svg#LavanderiaRegular") format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
