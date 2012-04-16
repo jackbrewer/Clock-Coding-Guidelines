@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% if page.section == 'general' %}
+		<title>Clock Coding Guidelines</title>
+		{% elsif page.title %}<title>{{ page.title }} / Clock Coding Guidelines</title>{% endif %}
+
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords"    content="" />
+		<meta name="author"      content="Clock - http://www.clock.co.uk">
+		<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" href="/resource/images/favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="/resource/images/apple-touch-icon-precomposed.png" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/resource/css/index.css" />
+		<link rel="stylesheet" href="/resource/js/google-code-prettify/prettify.css" />
+
+		<script>
+			document.getElementsByTagName('html')[0].setAttribute('class', 'js');
+		</script>
+
+	</head>{% if page.section %}
+	<body class={{ page.section }}>{% else%}
+	<body>{% endif %}
+
+		<div id="wrapper">
+			<div id="container">
+
+				<div id="main-header">
+					<hgroup>
+						<h1><a href="/">Clock</a></h1>
+						<h2>Coding Guidelines</h2>
+					</hgroup>
+				</div>
+
+				<nav id="main-navigation">
+					<ul>
+						<li class="general">
+							<a href="/">General</a>
+							<ul class="sub-nav">
+								<li><a href="/#general-overview">Overview</a></li>
+								<li><a href="/#browser-support">Browser Support</a></li>
+								<li><a href="/#text-editor-setup">Text Editor Setup</a></li>
+							</ul>
+						</li>
+						<li class="html">
+							<a href="/html">HTML</a>
+							<ul class="sub-nav">
+								<li><a href="/html/#html-overview">Overview</a></li>
+								<li><a href="/html/#page-titles">Page Titles</a></li>
+								<li><a href="/html/#html5">HTML5</a></li>
+								<li><a href="/html/#html-validation">Validation</a></li>
+							</ul>
+						</li>
+						<li class="css">
+							<a href="/css">CSS</a>
+							<ul class="sub-nav">
+								<li><a href="/css/#css-overview">Overview</a></li>
+								<li><a href="/css/#css3">CSS3</a></li>
+								<li><a href="/css/#vendor-prefixes">Vendor Prefixes</a></li>
+								<li><a href="/css/#web-fonts">Web Fonts</a></li>
+								<li><a href="/css/#ie-stylesheets">IE Stylesheets</a></li>
+								<li><a href="/css/#code-commenting">Code Commenting</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+				<div id="main-content">
+					{{ content }}
+				</div>
+
+				<div id="main-footer">
+					<small>&copy; Clock 2012</small>
+				</div>
+			</div>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>if (typeof jQuery === 'undefined') { document.write('<script src="/resource/js/jquery-1.7.1.min.js" />'); }</script>
+		<script src="/resource/js/google-code-prettify/prettify.js"></script>
+		<script src="/resource/js/yScroll.js"></script>
+		<script src="/resource/js/script.js"></script></body></html>
+
+	</body>
+</html>

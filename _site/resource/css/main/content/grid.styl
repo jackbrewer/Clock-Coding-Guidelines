@@ -1,0 +1,35 @@
+// TODO - Set column width instead of spacing as a mixin
+
+// Variables
+$baseGridWidth = 100%
+$baseColSpacing = 6%
+
+// Mixin to calculate column widths
+setColumnWidths(colCount, gridWidth = $baseGridWidth, colSpacing = $baseColSpacing)
+	$colWidth = ( gridWidth - ( colSpacing * ( colCount - 1 ))) / colCount
+	.grid-{colCount}
+		width gridWidth
+	.row
+		[class*="col-"]
+			margin-left colSpacing
+		for i in 1..colCount
+			.col-{i}
+				width ( $colWidth * i ) + ( colSpacing * ( i - 1 ))
+
+/** Generic Grid Styles **/
+[class*="grid-"]
+	float left
+
+.row
+	float left
+	clear left
+	width 100%
+
+[class*="col-"]
+	float left
+	margin-left $baseColSpacing
+	.row &:first-child
+		margin-left 0 !important
+
+/* 12 Column Flexible Grid */
+setColumnWidths(12)
