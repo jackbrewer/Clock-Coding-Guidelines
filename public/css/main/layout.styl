@@ -13,96 +13,128 @@
 	// max-width 920px
 	width 920px
 	padding 40px 20px
-	margin 0 auto
+	margin 40px auto 0
 
 #main-header
-	text-align center
-	margin-bottom $baseLineHeight
+	padding-bottom $baseLineHeight
+	margin-bottom $baseLineHeight*2
+	border-bottom 7px solid #000
 	h1
+		height 60px
+		margin 0
 		a
-			width 306px
-			min-height 98px
+			float right
+			text-align left
+			width 153px
+			min-height 60px
 			display block
 			text-indent -9999px
 			overflow hidden
-			margin 0 auto
+			margin 0
 			background url("/images/structure/logo-clock.png") 0 0 no-repeat
+			background-size 100% auto
 	h2
 		margin-bottom 0
+		text-align right
+
+	.general &
+		margin-bottom $baseLineHeight
+		h1
+			height auto
+			margin-bottom $baseLineHeight
+			a
+				float none
+				width 306px
+				min-height 98px
+				display block
+				text-indent -9999px
+				overflow hidden
+				margin 0 auto
+				background url("/images/structure/logo-clock.png") 0 0 no-repeat
+		h2
+			text-align center
 
 #main-navigation
-	height 42px
-	margin-bottom $baseLineHeight
-	width inherit
+	position fixed
+	top 0
+	left 0
+	width 100%
+	background-color #000
+	z-index 10
 	ul
-		width inherit
-		border-top 2px solid $baseBorderColor
-		border-bottom 4px solid $baseBorderColor
-		z-index 10
-		background-color #b7e2e9
+		width 940px
+		padding 0 10px
+		margin 0 auto
 		li
+			position relative
 			display inline-block
 			margin 3px 5px 3px
 			a
 				display block
-				color $baseFontColor
-				font(#000, 24px, 1em)
+				font(#fff, 24px, 1em)
 				line-height 1em
 				font-family "GothamDemiCondensed",Arial,Helvetica,sans-serif
 				text-decoration none
 				padding 3px 5px
-				border-radius 3px
+				border-radius 2px
 				text-rendering: optimizeLegibility;
 				&:hover
 					color #000
 					background-color $secondaryColor
-		&.fixed
-			position fixed
-			top 0
-			left auto
-
-#main-content > section
-	float left
-	width 100%
-	border-bottom 4px solid $baseBorderColor
-	padding-bottom $baseLineHeight
-	margin-bottom $baseLineHeight * 2
-
-	h2
-		clear both
-		border-top 1px solid rgba(0,0,0,.3)
-		padding-top $baseLineHeight
-
-// .row
-// 	clear both
-// 	float left
-
-// 	[class*="col-"]
-// 		float left
-// 		padding-left 6%
-// 		box-sizing border-box
-// 		&:first-child
-// 			padding-left 0
-// 	.col-1
-// 		width 34%
-// 	.col-2
-// 		width 66%
-
-.callout
-	position relative
-	text-shadow 0px 1px 2px $secondaryColor
-	&::after
-		content ""
+	.sub-nav
+		display none
 		position absolute
-		top -65px
-		left 0
-		margin -30px
-		padding 30px
-		width 260px
-		height 260px
-		background-color $secondaryColor
-		border-radius 50%
-		z-index 0
-	p
+		top 100%
+		left -5px
+		background-color #000
+		margin 0
+		padding 0 5px 5px
+		width auto
+		border-radius 0 0 3px 3px
+		li
+			display block
+			margin 0
+			padding 0
+			a
+				display block
+				white-space nowrap
+				font-size 15px
+				line-height 25px
+				margin 0
+				margin-top 4px
+				padding 5px 8px
+				font-family Georgia, serif
+				font-style italic
+
+	li:hover .sub-nav
+		display block
+
+#main-content
+	article
 		position relative
-		z-index 1
+		float left
+		width 100%
+		border-bottom 4px solid $baseBorderColor
+		padding-bottom $baseLineHeight
+		margin-bottom $baseLineHeight * 2
+
+	section
+		clear left
+		float left
+		width 100%
+		border-bottom 1px solid #000
+		margin-top -60px
+		padding-top 60px
+		margin-bottom 30px
+		padding-bottom 10px
+
+	section:last-child
+		padding-bottom 0
+		border-bottom 0
+
+	h1
+		position absolute
+		top -198px
+		left 0
+		font-size 130px
+		line-height 130px

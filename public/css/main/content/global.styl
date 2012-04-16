@@ -17,3 +17,22 @@
 	position relative
 	left -40px
 	font-style italic
+
+.callout
+	position relative
+	text-shadow 0px 1px 2px $secondaryColor
+	&::after
+		content ""
+		position absolute
+		top -65px
+		left 0
+		margin -30px
+		padding 30px
+		width 260px
+		height 260px
+		background-color $secondaryColor
+		border-radius 50%
+		z-index 0
+	p
+		position relative
+		z-index 1
