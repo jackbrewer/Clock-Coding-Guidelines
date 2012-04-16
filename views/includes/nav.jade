@@ -1,5 +1,24 @@
 nav#main-navigation
 	ul
-		li: a(href='/') Overview
-		li: a(href='/html') HTML
-		li: a(href='/css') CSS
+		li.general
+			a(href='/') General
+			ul.sub-nav
+				li: a(href='/#general-overview') Overview
+				li: a(href='/#browser-support') Browser Support
+				li: a(href='/#text-editor-setup') Text Editor Setup
+		li.html
+			a(href='/html') HTML
+			ul.sub-nav
+				li: a(href='/html/#html-overview') Overview
+				li: a(href='/html/#page-titles') Page Titles
+				li: a(href='/html/#html5') HTML5
+				li: a(href='/html/#html-validation') Validation
+		li.css
+			a(href='/css') CSS
+			ul.sub-nav
+				li: a(href='/css/#css-overview') Overview
+				li: a(href='/css/#css3') CSS3
+				li: a(href='/css/#vendor-prefixes') Vendor Prefixes
+				li: a(href='/css/#web-fonts') Web Fonts
+				li: a(href='/css/#ie-stylesheets') IE Stylesheets
+				li: a(href='/css/#code-commenting') Code Commenting

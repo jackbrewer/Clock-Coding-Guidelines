@@ -7,7 +7,7 @@ html(lang='en')
 			meta(name='keywords', content='')
 		
 			//- SITE INFORMATION
-			title Clock Coding Guidelines
+			title= page.title
 
 		block styles
 			//- CSS
@@ -17,7 +17,7 @@ html(lang='en')
 		script
 			document.getElementsByTagName('html')[0].setAttribute('class', 'js');
 
-	body
+	body(class=page.section)
 		#wrapper
 			#container
 				block header
