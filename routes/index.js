@@ -4,19 +4,28 @@
  */
 
 exports.index = function(req, res){
-	res.render('pages/overview', {
-		title: 'Clock Coding Guidelines'
+	res.render('pages/index', {
+		page: {
+			title: 'Clock Coding Guidelines',
+			section: 'general'
+		}
 	});
 };
 
 exports.html = function(req, res){
 	res.render('pages/html', {
-		title: 'HTML / Clock Coding Guidelines'
+		page: {
+			title: 'HTML / Clock Coding Guidelines',
+			section: 'html'
+		}
 	});
 };
 
 exports.css = function(req, res){
 	res.render('pages/css', {
-		title: 'CSS / Clock Coding Guidelines'
+		page: {
+			title: 'CSS / Clock Coding Guidelines',
+			section: 'css'
+		}
 	});
 };
