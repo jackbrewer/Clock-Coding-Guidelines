@@ -1,0 +1,244 @@
+/*
+ * layout.css
+ * Styles elements common to all pages
+ * ===================================
+ */
+
+#wrapper {
+	background-image: url("../images/structure/illustration.png");
+	background-position: 100% 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: auto;
+}
+
+#container {
+	width: 920px;
+	padding: 40px 20px;
+	margin: 40px auto 0;
+}
+
+
+/*-------------
+	Site Header
+---------------*/
+
+#main-header {
+	padding-bottom: 26px;
+	margin-bottom: 32px;
+	border-bottom: 7px solid #000;
+}
+
+#main-header h1 {
+	height: 60px;
+	margin: 0;
+}
+
+#main-header h1 a {
+	float: right;
+	text-align: left;
+	width: 153px;
+	min-height: 60px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0;
+	background: url("../images/structure/logo-clock.png") 0 0 no-repeat;
+	background-size: 100% auto;
+}
+
+#main-header h2 {
+	margin-bottom: 0;
+	text-align: right;
+}
+
+.general #main-header {
+	margin-bottom: 26px;
+}
+
+.general #main-header h1 {
+	height: auto;
+	margin-bottom: 26px;
+}
+
+.general #main-header h1 a {
+	float: none;
+	width: 306px;
+	min-height: 98px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 auto;
+	background: url("../images/structure/logo-clock.png") 0 0 no-repeat;
+}
+
+.general #main-header h2 {
+	text-align: center;
+}
+
+
+/*---------------
+	Site Navigation
+-----------------*/
+
+#main-navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	z-index: 10;
+}
+
+#main-navigation ul {
+	width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+#main-navigation ul li {
+	position: relative;
+	display: inline-block;
+	margin: 3px 5px 3px;
+}
+
+#main-navigation ul li a {
+	display: block;
+	color: #fff;
+	font-size: 140%;
+	line-height: 1em;
+	font-family: "GothamDemiCondensed", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	padding: 3px 4px;
+	border-radius: 2px;
+	text-rendering: optimizeLegibility;
+}
+
+#main-navigation ul li a:hover {
+	color: #000;
+	background-color: #ffd24f;
+}
+
+#main-navigation .sub-nav {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -5px;
+	background-color: #000;
+	margin: 0;
+	padding: 0 5px 5px;
+	width: auto;
+	border-radius: 0 0 3px 3px;
+}
+
+#main-navigation .sub-nav li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#main-navigation .sub-nav li a {
+	display: block;
+	white-space: nowrap;
+	font-size: 100%;
+	line-height: 1em;
+	margin: 0;
+	margin-top: 4px;
+	padding: 5px 8px;
+	font-family: Georgia, serif;
+}
+
+#main-navigation li:hover .sub-nav {
+	display: block;
+}
+
+
+/*-------------------
+	Main Content Area
+---------------------*/
+
+#main-content article {
+	position: relative;
+	float: left;
+	width: 100%;
+	border-bottom: 4px solid #222;
+	padding-bottom: 26px;
+	margin-bottom: 52px;
+}
+
+#main-content section {
+	clear: left;
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #000;
+	margin-top: -60px;
+	padding-top: 60px;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+}
+
+#main-content section:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+#main-content h1 {
+	position: absolute;
+	top: -178px;
+	left: 0;
+	font-size: 130px;
+	line-height: 130px;
+}
+
+#main-content h1 a {
+	color: #000;
+	text-decoration: none;
+}
+
+#main-content h1 a:hover {
+	background: none;
+}
+
+/* Basic Grid System */
+
+[class*="grid-"] {
+	float: left;
+}
+
+.row {
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+[class*="col-"] {
+	float: left;
+	margin-left: 6%;
+}
+
+.row [class*="col-"]:first-child {
+	margin-left: 0 !important;
+}
+
+.grid-12 {
+	width: 100%;
+}
+
+.row [class*="col-"] {
+	margin-left: 6%;
+}
+
+.row .col-1 { width: 2.8333333333333335%; }
+.row .col-2 { width: 11.666666666666668%; }
+.row .col-3 { width: 20.5%; }
+.row .col-4 { width: 29.333333333333336%; }
+.row .col-5 { width: 38.16666666666667%; }
+.row .col-6 { width: 47%; }
+.row .col-7 { width: 55.833333333333336%; }
+.row .col-8 { width: 64.66666666666667%; }
+.row .col-9 { width: 73.5%; }
+.row .col-10 { width: 82.33333333333334%; }
+.row .col-11 { width: 91.16666666666667%; }
+.row .col-12 { width: 100%; }

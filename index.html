@@ -15,14 +15,20 @@ section: general
 	</section>
 	<section id="browser-support">
 		<h2>Browser Support</h2>
-		<p>Unless client requirements stipulate otherwise, our full list of browser support is currently:</p>
-		<ul>
-			<li>Chrome</li>
-			<li>Firefox</li>
-			<li>Opera</li>
-			<li>Safari</li>
-			<li>IE 7+</li>
-		</ul>
+		<div class="row">
+			<div class="col-3">
+				<p>Unless client requirements stipulate otherwise, our full list of browser support is currently:</p>
+			</div>
+			<div class="col-9">
+				<ul class="browser-logos">
+					<li class="logo-chrome"><a href="https://www.google.com/chrome/">Chrome</a></li>
+					<li class="logo-firefox"><a href="http://www.mozilla.org/firefox/">Firefox</a></li>
+					<li class="logo-opera"><a href="http://www.opera.com/download/">Opera</a></li>
+					<li class="logo-safari"><a href="http://www.apple.com/safari/">Safari</a></li>
+					<li class="logo-ie"><a href="http://www.microsoft.com/windows/internet-explorer/">IE7+</a></li>
+				</ul>
+			</div>
+		</div>
 		<p>IE 6 should be considered, but does not need to function as fully as in the above &mdash; an acceptable level of usability is expected though. Everything we produce should be tested in all browsers available, on Windows, Mac as well as mobile browsers.</p>
 	</section>
 	<section id="text-editor-setup">
@@ -34,9 +40,19 @@ section: general
 			</div>
 			<div class="col-4">
 				<aside class="callout">
-					<p>Jackbrewer on GitHub has made some great <a href="https://github.com/jackbrewer/HTML-JackBB.tmbundle">HTML</a> and <a href="https://github.com/jackbrewer/CSS-JackBB.tmbundle">CSS</a> bundles that speed up dev time in TextMate and Sublime. His <a href="https://github.com/jackbrewer/Sublime-Settings">Sublime settings</a> are also available to aid with setup.</p>
+					<p>Jackbrewer on GitHub has made some great <a href="https://github.com/jackbrewer/html-plus.tmbundle">HTML</a> and <a href="https://github.com/jackbrewer/css-plus.tmbundle">CSS</a> bundles that speed up dev time in TextMate and Sublime. His <a href="https://github.com/jackbrewer/Sublime-Settings">Sublime settings</a> are also available to aid with setup.</p>
 				</aside>
 			</div>
 		</div>
+	</section>
+	<section id="optimisation">
+		<h3>Optimisation</h3>
+		<p>The time taken for websites to load directly impacts user experience. There are lots of ways to optimise page speed, with the most common being minimising HTTP requests.</p>
+		<blockquote>
+			<p>80% of the end-user response time is spent on the front-end. Most of this time is tied up in downloading all the components in the page: images, stylesheets, scripts, Flash, etc. Reducing the number of components in turn reduces the number of HTTP requests required to render the page. This is the key to faster pages.</p>
+			<cite>Yahoo Developer Network</cite>
+		</blockquote>
+		<p>One way to reduce HTTP requests is by being careful not to use too many scripts or stylesheets – we often combine multiple files before they are output to the browser.</p>
+		<p>Another way to increase page speed is to optimise images. We should always use image sprites to combine images where possible and all images should be run through a lossless image compressor such as ImageOptim before being deployed.</p>
 	</section>
 </article>

@@ -5,9 +5,79 @@ section: html
 ---
 
 <article id="html">
-	<h1>HTML</h1>
+	<h1><a href="html.html">HTML</a></h1>
 	<section id="html-overview">
 		<h2>Overview</h2>
+		<div class="row">
+			<div class="col-12">
+				<p>HTML is a markup language used to structure and display a content on the web. It is made up of text, headings, lists, links among other elements.</p>
+				<p>Writing semantic HTML is important. We should always write our optimal HTML before considering any CSS or JavaScript. It should always be possible to use and navigate a site without either of these things enabled. Content ordering and title hierarchy should be thought about and forms and links should all work.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="best-practices">
+		<h2>Best Practices</h2>
+		<div class="row">
+			<div class="col-12">
+				<ul>
+					<li>HTML5 allows us to add attributes without quotes, but we always add them to increase consistency and readability.</li>
+					<li>Use class and id attributes sparingly.</li>
+					<li>Avoid describing styles when deciding on class names: <code>class="primary-button"</code> is a better choice than <code>class="big-blue-button"</code>, especially when the time comes to redesign the site.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h3>Structure</h3>
+				<ul>
+					<li>Keep use of <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags to a minimum. If you can’t explain why you need it, get rid of it.</li>
+					<li>On larger sites, consider adding an HTML comment to the closing tag of major elements. This will aid navigation of your source and will highlight nesting / indentation errors.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h3>Text</h3>
+				<ul>
+					<li>Paragraphs of text should always be placed in a <code>&lt;p&gt;</code> tag. Never use multiple <code>&lt;br/&gt;</code> tags.</li>
+					<li><code>&lt;br/&gt;</code> tags should only be used for breaking text mid-paragraph, for example in an address.</li>
+					<li>Use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> to add emphasis to text. <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> should be avoided.</li>
+					<li>Avoid writing text in all caps or lowercase. Use CSS to achieve the same effect.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h3>Lists</h3>
+				<ul>
+					<li>Use <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> and <code>&lt;dl&gt;</code> elements for information in list form – think carefully about which is most appropriate.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h3>Tables</h3>
+				<ul>
+					<li>Tables should be used for displaying tabular data &mdash; nothing else.</li>
+					<li>Ensure all tables contain correct <code>&lt;th&gt;</code> headings and scope attributes</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h3>Forms</h3>
+				<ul>
+					<li>All form fields should have a suitable <code>&lt;label&gt;</code> element.</li>
+					<li>Form fields shouldn’t rely on a placeholder alone to indicate their intended content.</li>
+					<li>Group sets of inputs in fieldsets, especially groups of radio buttons or checkboxes.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="structure">
+		<h2>Structure</h2>
 		<div class="row">
 			<div class="col-4">
 				<p>We use the HTML5 doctype in all new projects. Within the head of the document, we define the character-set as UTF-8, and we use metatags to define accurate page titles, descriptions and keywords.</p>
@@ -36,6 +106,46 @@ section: html
 			</div>
 		</div>
 	</section>
+	<section id="html5">
+		<h2>HTML5</h2>
+		<div class="row">
+			<div class="col-8">
+				<p>We try to use as much HTML5 as we can get away with, without relying on polyfills that force old browsers to work. The following HTML5 syntax will render gracefully in IE.</p>
+				<ul>
+					<li>No 'type' attributes</li>
+					<li>New input types (date, number email, search tel, url) *</li>
+					<li>Block level links</li>
+					<li>Input 'placeholder' attribute</li>
+					<li>Use of button tag</li>
+				</ul>
+				<p>Some projects will require full HTML5 development, where old browsers are forced to render all new elements. This is not our current standard though.</p>
+				<p><small>* Any browser incapable of rendering these elements will show a text input.</small></p>
+			</div>
+			<div class="col-4">
+				<img src="resource/images/content/html5-logo.png" alt="HTML5 Logo" />
+			</div>
+		</div>
+	</section>
+	<section id="accessibility">
+		<h2>Accessibility</h2>
+		<p></p>
+		<ul>
+			<li>Alt text on images</li>
+			<li>Don't use display: none; for image replacement</li>
+			<li>titles on links where applicable</li>
+			<li>Microformats</li>
+			<li>Escape characters (&amp;amp; etc)</li>
+		</ul>
+	</section>
+	<section id="semantic-code">
+		<h2>Semantic Code</h2>
+		<p>Semantic code is important. We should always write our optimal HTML before considering any CSS.</p>
+		<ul>
+			<li>Title Hierarchy</li>
+			<li>Makes sense without CSS</li>
+			<li></li>
+		</ul>
+	</section>
 	<section id="page-titles">
 		<h2>Page Titles</h2>
 		<p>Out format for page titles is:</p>
@@ -47,19 +157,6 @@ section: html
 			<dt>Article Page</dt>
 			<dd><code class="prettyprint">&lt;title&gt;Article Name / Section Name / Site Name&lt;/title&gt;</code></dd>
 		</dl>
-	</section>
-	<section id="html5">
-		<h2>HTML5</h2>
-		<p>We try to use as much HTML5 as we can get away with, without relying on polyfills that force old browsers to work. The following HTML5 syntax will render gracefully in IE.</p>
-		<ul>
-			<li>No 'type' attributes</li>
-			<li>New input types (date, number email, search tel, url) *</li>
-			<li>Block level links</li>
-			<li>Input 'placeholder' attribute</li>
-			<li>Use of button tag</li>
-		</ul>
-		<p>Some projects will require full HTML5 development, where old browsers are forced to render all new elements. This is not our current standard though.</p>
-		<p><small>* Any browser incapable of rendering these elements will show a text input.</small></p>
 	</section>
 	<section id="html-validation">
 		<h2>Validation</h2>

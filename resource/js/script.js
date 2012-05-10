@@ -16,7 +16,7 @@ $(document).ready( function(){
 		var target = '#' + $(this).attr('href').split('#')[1];
 		$('html, body').stop().animate({
 			scrollTop: $(target).offset().top
-		}, 1000);
+		}, 300);
 		e.preventDefault();
 	});
 

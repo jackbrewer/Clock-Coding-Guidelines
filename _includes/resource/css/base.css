@@ -1,0 +1,397 @@
+/*
+ * base.css
+ * All default styles for layout and typography
+ * ============================================
+ */
+
+/*--------------------
+	Typographic Styles
+----------------------*/
+
+::selection {
+	color: #000;
+	background-color: #ffd24f;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	color: #000;
+	background-color: #ffd24f;
+	text-shadow: none;
+}
+
+@font-face {
+	font-family: 'GothamDemiCondensed';
+	src: url("../fonts/franklingothicdemicondensed-webfont.eot") format('eot'),
+	     url("../fonts/franklingothicdemicondensed-webfont.woff") format('woff'),
+	     url("../fonts/franklingothicdemicondensed-webfont.ttf") format('truetype'),
+	     url("../fonts/franklingothicdemicondensed-webfont.svg#DIN-Bold") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, input, button, textarea, select {
+	font-family: Georgia, serif;
+	font-size: 15px;
+	line-height: 1.7;
+	/*font-style: italic;*/
+	color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-style: normal;
+	font-weight: normal;
+	color: #000;
+	line-height: 1;
+	font-family: "GothamDemiCondensed", Arial, Helvetica, sans-serif;
+	letter-spacing: -1px;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+a {
+	color: #222;
+	text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+	color: #000;
+}
+
+a:active {
+	outline: none;
+}
+
+article a {
+	position: relative;
+	margin: -3px -4px;
+	padding: 2px 4px;
+	border-radius: 3px;
+	-webkit-transition: color 0.3s ease, background-color 0.4s ease;
+	   -moz-transition: color 0.3s ease, background-color 0.4s ease;
+	    -ms-transition: color 0.3s ease, background-color 0.4s ease;
+	     -o-transition: color 0.3s ease, background-color 0.4s ease;
+	        transition: color 0.3s ease, background-color 0.4s ease;
+}
+
+article a:hover,
+article a:focus {
+	color: #000;
+	background-color: #ffd24f;
+	-webkit-transition: all 0s ease;
+	   -moz-transition: all 0s ease;
+	    -ms-transition: all 0s ease;
+	     -o-transition: all 0s ease;
+	        transition: all 0s ease;
+}
+
+strong,
+em {
+	font-weight: bold;
+	color: #000;
+}
+
+/*---------------
+	Layout Styles
+-----------------*/
+
+html {
+	background-image: url("../images/structure/bg.gif");
+	background-position: 0px 0px;
+	background-repeat: repeat;
+	background-color: #fff;
+	background-attachment: fixed;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("../images/structure/blue-bg.png");
+	background-position: 50% -50px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+body, dl, dt, dd, li, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+h2, h3, h4, h5, h6 {
+	margin: 0 0 0.7em 0;
+	padding: 0;
+}
+
+p, ul, ol, pre, dt, hr, address, table, label {
+	margin: 0 0 1.7em;
+	padding: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+img,
+object {
+	vertical-align: bottom;
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
+ul li {
+	list-style-type: disc;
+}
+
+ul ul li {
+	list-style-type: circle;
+}
+
+ol ol li {
+	list-style-type: lower-alpha;
+}
+
+nav ul,
+nav ul li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* TODO - organise below here */
+
+code {
+	font-style: normal;
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	font-size: 13px;
+	line-height: 25px;
+	background-color: rgba(255,255,255,0.50);
+	margin: -1px -4px;
+	padding: 1px 4px;
+	border-radius: 3px;
+	-webkit-transition: all 0.2s ease;
+	   -moz-transition: all 0.2s ease;
+	    -ms-transition: all 0.2s ease;
+	     -o-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+}
+
+code:hover {
+	background-color: rgba(255,255,255,0.85);
+}
+
+code:not(:hover) span {
+	color: #777;
+	-webkit-transition: color 1s ease;
+	   -moz-transition: color 1s ease;
+	    -ms-transition: color 1s ease;
+	     -o-transition: color 1s ease;
+	        transition: color 1s ease;
+}
+
+pre {
+	background-color: rgba(255,255,255,0.50);
+	padding: 10px 16px;
+	margin-top: -10px;
+	border-radius: 3px;
+	-webkit-transition: all 0.2s ease;
+	   -moz-transition: all 0.2s ease;
+	    -ms-transition: all 0.2s ease;
+	     -o-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+}
+
+pre code {
+	color: #777;
+	border-radius: 0;
+	background: none;
+}
+
+pre:hover {
+	background-color: rgba(255,255,255,0.85);
+}
+
+pre:hover span {
+	-webkit-transition: color 0.2s ease;
+	   -moz-transition: color 0.2s ease;
+	    -ms-transition: color 0.2s ease;
+	     -o-transition: color 0.2s ease;
+	        transition: color 0.2s ease;
+}
+
+pre:hover code {
+	background: none;
+	color: #222;
+}
+
+pre:not(:hover) span {
+	color: #777;
+	-webkit-transition: color 1s ease;
+	   -moz-transition: color 1s ease;
+	    -ms-transition: color 1s ease;
+	     -o-transition: color 1s ease;
+	        transition: color 1s ease;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+legend {
+	color: #000;
+/* padding is used so Internet Explorer does not cut-off descenders in letters like p, g, etc.) */
+	padding-bottom: 0.5em;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption {
+	position: absolute;
+	left: -999em;
+}
+
+th {
+	text-align: center;
+}
+
+tbody th {
+	text-align: left;
+}
+
+blockquote,
+q,
+em,
+cite,
+dfn,
+i,
+cite,
+var,
+address {
+	font-style: italic;
+}
+
+blockquote {
+	quotes: '“' '”';
+	border-left: 1px solid #fff;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding: 1.7em 40px;
+	margin-bottom: 1.7em;
+	background-color: rgba(255,255,255,0.50);
+}
+
+blockquote p {
+	font-style: italic;
+	font-size: 110%;
+	margin-bottom: 0;
+}
+
+blockquote cite {
+	font-size: 80%;
+}
+
+blockquote cite:before {
+	content: "– ";
+}
+
+blockquote p:before {
+	content: '“';
+}
+
+blockquote p:after {
+	content: '”';
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+th,
+strong,
+dt,
+b {
+	font-weight: bold;
+}
+
+ins {
+	text-decoration: none;
+	border-bottom: 3px double #333;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #333;
+	font-variant: normal;
+}
+
+dt {
+	margin-bottom: 4px;
+}
+
+dd {
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
+li {
+	margin-left: 20px;
+}
+
+hr {
+	margin-right: 30px;
+	margin-left: 30px;
+	border-style: inset;
+	border-width: 1px;
+}
